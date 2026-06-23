@@ -38,7 +38,8 @@ export default function App() {
           const ingredientMatch = recipe.ingredients.some((ingredient) =>
             ingredient.toLowerCase().includes(query)
           )
-          return nameMatch || ingredientMatch
+          const categoryMatch = recipe.category.toLowerCase().includes(query)
+          return nameMatch || ingredientMatch || categoryMatch
         })
         // 3. SORT — copy with slice() first so we never mutate the source
         //    array, then sort by the chosen option.
