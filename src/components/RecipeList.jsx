@@ -10,7 +10,10 @@ export default function RecipeList({ recipes, onSelect }) {
   }
 
   return (
-    <div className="recipe-grid" key={recipes.map((r) => r.id).join('-')}>
+    <div
+      key={recipes.map((r) => r.id).join('-')}
+      className="grid animate-fade-in grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-4"
+    >
       {recipes.map((recipe) => (
         <RecipeCard key={recipe.id} recipe={recipe} onSelect={onSelect} />
       ))}

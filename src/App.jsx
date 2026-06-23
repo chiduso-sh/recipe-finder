@@ -58,13 +58,15 @@ export default function App() {
   }, [debouncedSearch, activeCategory, sortOption])
 
   return (
-    <div className="app">
-      <header className="app-header">
-        <h1>Recipe Finder</h1>
-        <p className="subtitle">Search, filter and sort a small recipe collection.</p>
+    <div className="mx-auto max-w-4xl px-5 pt-8 pb-16">
+      <header className="mb-7">
+        <h1 className="text-3xl font-semibold">Recipe Finder</h1>
+        <p className="mt-1 text-neutral-500">
+          Search, filter and sort a small recipe collection.
+        </p>
       </header>
 
-      <div className="controls">
+      <div className="mb-5 flex flex-col gap-4">
         <SearchBar value={searchTerm} onChange={setSearchTerm} />
         <FilterControls
           activeCategory={activeCategory}
@@ -74,7 +76,7 @@ export default function App() {
         />
       </div>
 
-      <p className="result-count">
+      <p className="mb-4 text-sm text-neutral-500">
         {visibleRecipes.length}{' '}
         {visibleRecipes.length === 1 ? 'recipe' : 'recipes'} found
       </p>

@@ -1,6 +1,6 @@
 # Recipe Finder
 
-A small React + Vite app for searching, filtering and sorting a local collection of recipes. No backend — the data is a hardcoded array.
+A small React + Vite app for searching, filtering and sorting a local collection of recipes. Styled with Tailwind CSS v4. No backend — the data is a hardcoded array.
 
 ## Run it
 
